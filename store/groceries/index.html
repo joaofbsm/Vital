@@ -7,24 +7,30 @@
 
     <meta name="description" content="Vital">
     <meta name="author" content="Joao Martins">
-    <link rel="icon" href="../../img/icon.ico">
+    <link rel="icon" href="../img/icon.ico">
 
     <title>Vital</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="../../css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="container">
 
-      <div class="masthead">
-        <img class="logo" src="../../img/logo.png" />
+      <div class="masthead">       
+        <a href="../../index.html">
+          <img class="logo" src="../../img/logo.png" />
+        </a>
 
+        <div class="header-right">
           <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
@@ -35,10 +41,19 @@
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>
 
+          <div class="shopping-item">
+            <a href="cart.html">
+              Cart - 
+              <span class="cart-amunt">£00.00</span> 
+              <i class="fa fa-shopping-cart"></i> 
+              <span class="product-count">0</span>
+            </a>
+          </div>
+        </div>
+
         <nav>
           <ul class="nav nav-justified">
-            <li><a class="hvr-underline-from-center" href="../../index.html">HOME</a></li>
-            <li class="active"><a href="">GROCERIES</a></li>
+            <li class="active"><a href="store/groceries/index.html">GROCERIES</a></li>
             <li><a class="hvr-underline-from-center"href="#">HOME/GARDEN</a></li>
             <li><a class="hvr-underline-from-center"href="#">TECHNOLOGY</a></li>
             <li><a class="hvr-underline-from-center" href="#">LOYALTY PROGRAM</a></li>
@@ -48,38 +63,62 @@
       </div>
 
       <div class="carrousel">
-        <img src="../../img/carrousel1.png" />
+        <img src="../../img/groceries.jpg" />
       </div>
 
       <div class="jumbotron">
-        <h1>Loyalty Program</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today!</a></p>
+        <h1>Fresh Products</h1>
+        <p class="lead">Take a look at our newest products. From the farm to your table!</p>
       </div>
 
-      <div class="row">
-        <div class="product-container first">
+      <div class="product-row">
+        <div class="product-container">
           <div class="product">
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+            <img class="product-image" src="../../img/products/potato.png">
+            <p>Potatoes<br /><span class="price">£1.00</span></p>
+            <div class="product-hover">
+              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
           </div>
         </div>
         <div class="product-container">
           <div class="product">
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+            <img class="product-image" src="../../img/products/grapes.png">
+            <p>Grapes<br /><span class="price">£2.00</span></p>
+            <div class="product-hover">
+              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
           </div>
         </div>
         <div class="product-container">
           <div class="product">
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+              <img class="product-image" src="../../img/products/pepper.png">
+              <p>Red Pepper<br /><span class="price">£1.50</span></p>
+              <div class="product-hover">
+                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+              </div>
           </div>
         </div>
       </div>
 
       <footer class="footer">
-        <p>&copy; <b>2016</b> Vital</p>
+        <div class="footer-copyright">
+          <p>&copy; <b>2016</b> Vital</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-youtube"></i>
+            </a>
+        </div>
       </footer>
 
     </div>
