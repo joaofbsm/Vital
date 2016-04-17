@@ -98,6 +98,10 @@ img.logo {
   float: right;
 }
 
+.hidden-element {
+  display: none;
+}
+
 .shopping-item {
     border: 1px solid #ddd;
     float: right;
@@ -110,7 +114,7 @@ img.logo {
 .shopping-item a {
     color: #666;
 }
-.cart-amunt {
+.cart-amount {
     color:  #4cbb17;
     font-weight: 700;
 }
@@ -140,7 +144,7 @@ img.logo {
 .shopping-item:hover a {
     color: #fff;text-decoration: none
 }
-.shopping-item:hover .cart-amunt {
+.shopping-item:hover .cart-amount {
     color: #fff;
 }
 .shopping-item:hover .product-count {
