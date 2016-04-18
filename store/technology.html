@@ -22,7 +22,9 @@
 
     <script type="text/javascript" src="../js/vital_core.js"></script>
 
-    <script type="text/javascript" src="../js/simpleCart.min.js"></script>
+    <script src="../js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="../js/simpleCart.js"></script>
   </head>
 
   <body>
@@ -46,9 +48,9 @@
           <div class="shopping-item">
             <a href="cart.html">
               Cart - 
-              <span class="cart-amount">£00.00</span> 
+              <span class="cart-amount simpleCart_total"></span> 
               <i class="fa fa-shopping-cart"></i> 
-              <span class="product-count">0</span>
+              <span class="product-count simpleCart_quantity"></span> 
             </a>
           </div>
         </div>
@@ -71,33 +73,33 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/iphones.jpeg">
-            <p>Iphone 6s/s+<br /><span class="price">£499.99</span></p>
+            <p><span class="item_name">Iphone 6s/s+</span><br /><span class="price item_price">£499.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/sam-s7.png">
-            <p>Samsung S7/Edge<br /><span class="price">£499.99</span></p>
+            <p><span class="item_name">Samsung S7/Edge</span><br /><span class="price item_price">£499.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/bb.png">
-            <p>Blackberry Priv<br /><span class="price">£399.99</span></p>
+            <p><span class="item_name">Blackberry Priv</span><br /><span class="price item_price">£399.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
@@ -106,33 +108,33 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/4k-tv-sony.jpg">
-            <p>Song 4k TV 60 inches<br /><span class="price">£599.99</span></p>
+            <p><span class="item_name">Song 4k TV 60 inches</span><br /><span class="price item_price">£599.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/sony-a7.JPG">
-            <p>Sony A7 Camera<br /><span class="price">£1499.99</span></p>
+            <p><span class="item_name">Sony A7 Camera</span><br /><span class="price item_price">£1499.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/hp-printer.png">
-            <p>HP Printer<br /><span class="price">£99.99</span></p>
+            <p><span class="item_name">HP Printer</span><br /><span class="price item_price">£99.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
@@ -141,33 +143,33 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/ipad.png">
-            <p>Ipad<br /><span class="price">£399.99</span></p>
+            <p><span class="item_name">Ipad</span><br /><span class="price item_price">£399.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/ipod.png">
-            <p>Ipod<br /><span class="price">£249.99</span></p>
+            <p><span class="item_name">Ipod</span><br /><span class="price item_price">£249.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/ps4.png">
-            <p>PS4<br /><span class="price">£149.99</span></p>
+            <p><span class="item_name">PS4</span><br /><span class="price item_price">£149.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
@@ -176,33 +178,33 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/xbox1.png">
-            <p>Xbox One<br /><span class="price">£199.99</span></p>
+            <p><span class="item_name">Xbox One</span><br /><span class="price item_price">£199.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/Alienware-laptop.jpg">
-            <p>Alienware Laptop<br /><span class="price">£1199.99</span></p>
+            <p><span class="item_name">Alienware Laptop</span><br /><span class="price item_price">£1199.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/Hp-Laptop.jpg">
-            <p>HP Laptop<br /><span class="price">£299.99</span></p>
+            <p><span class="item_name">HP Laptop</span><br /><span class="price item_price">£299.99</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>

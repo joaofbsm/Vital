@@ -19,9 +19,13 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="../css/style.css" rel="stylesheet">
-  </head>
 
-  <script src="../js/vital_core.js"></script>
+    <script type="text/javascript" src="../js/vital_core.js"></script>
+
+    <script src="../js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="../js/simpleCart.js"></script>
+  </head>
 
   <body>
     <div class="container">
@@ -44,9 +48,9 @@
           <div class="shopping-item">
             <a href="cart.html">
               Cart - 
-              <span class="cart-amount">£00.00</span> 
+              <span class="cart-amount simpleCart_total"></span> 
               <i class="fa fa-shopping-cart"></i> 
-              <span class="product-count">0</span>
+              <span class="product-count simpleCart_quantity"></span> 
             </a>
           </div>
         </div>
@@ -73,68 +77,68 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/potato.png">
-            <p>Potatoes<br /><span class="price">£1.00</span></p>
+            <p><span class="item_name">Potatoes</span><br /><span class="price item_price">£1.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/grapes.png">
-            <p>Grapes<br /><span class="price">£2.00</span></p>
+            <p><span class="item_name">Grapes</span><br /><span class="price item_price">£2.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
-            <img class="product-image" src="../img/products/pepper.png">
-            <p>Red Pepper<br /><span class="price">£1.50</span></p>
-            <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-            </div>
+          <div class="product simpleCart_shelfItem">
+              <img class="product-image" src="../img/products/pepper.png">
+              <p><span class="item_name">Red Pepper</span><br /><span class="price item_price">£1.50</span></p>
+              <div class="product-hover">
+                <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+              </div>
           </div>
         </div>
       </div>
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/cabbage.png">
-            <p>Cabbage<br /><span class="price">£2.00</span></p>
+            <p><span class="item_name">Cabbage</span><br /><span class="price item_price">£2.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
         
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/carrot.png">
-            <p>Carrots<br /><span class="price">£0.75</span></p>
+            <p><span class="item_name">Carrots</span><br /><span class="price item_price">£0.75</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/lettuce.jpg">
-              <p>Lettuce<br /><span class="price">£1.00</span></p>
+              <p><span class="item_name">Lettuce</span><br /><span class="price item_price">£1.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
@@ -143,33 +147,33 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/tomatoe.jpg">
-            <p>Tomatoes<br /><span class="price">£1.50</span></p>
+            <p><span class="item_name">Tomatoes</span><br /><span class="price item_price">£1.50</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/coconut.jpg">
-            <p>Coconut<br /><span class="price">£2.00</span></p>
+            <p><span class="item_name">Coconut</span><br /><span class="price item_price">£2.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/orange.jpg">
-            <p>Orange<br /><span class="price">£0.50</span></p>
+            <p><span class="item_name">Orange</span><br /><span class="price item_price">£0.50</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
@@ -178,33 +182,33 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/banana.jpg">
-            <p>Banana<br /><span class="price">£1.00</span></p>
+            <p><span class="item_name">Banana</span><br /><span class="price item_price">£1.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/bread.jpg">
-            <p>Bread<br /><span class="price">£1.00</span></p>
+            <p><span class="item_name">Bread</span><br /><span class="price item_price">£1.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
 
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="../img/products/Milk.jpg">
-            <p>1 Litre of Milk<br /><span class="price">£1.00</span></p>
+            <p><span class="item_name">1 Litre of Milk</span><br /><span class="price item_price">£1.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
               <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
