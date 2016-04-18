@@ -33,3 +33,27 @@ function signout() {
   document.getElementById("signinButton").style.display = 'inline-block';
   document.getElementById("loggedin").style.display = 'none';
 }
+
+function checkout() {
+  var grandTotal = ($("span.simpleCart_grandTotal").text().trim()).substring(1);
+  if(grandTotal == 0) {
+    alert("Cart is empty.");
+  }
+  else if(localStorage.getItem("username") == null) {
+    alert("You need to login before proceeding to payment.");
+  }
+  else {
+    localStorage.setItem("grandTotal", grandTotal);
+    window.location.href="payment.html";
+  }
+}
+
+function updatePayment() {
+  document.getElementById("finalValue").innerHTML = localStorage.getItem("grandTotal");
+}
+
+function purchase() {
+  simpleCart.empty();
+  window.location.href="../index.html";
+  alert("Payment Successful");
+}
