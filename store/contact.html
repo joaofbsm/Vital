@@ -12,13 +12,19 @@
     <title>Vital</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom styles -->
-    <link rel="stylesheet" href="../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/vital_core.js"></script>
+
+    <script src="../js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="../js/simpleCart.js"></script>
   </head>
 
   <body>
@@ -26,36 +32,40 @@
     <div class="container">
 
       <div class="masthead">       
-        <a href="../../index.html">
-          <img class="logo" src="../../img/logo.png" />
+        <a href="../index.html">
+          <img class="logo" src="../img/logo.png" />
         </a>
 
         <div class="header-right">
           <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input type="text" id="email" name="email" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="button" id="signinButton" onclick="signin(this.form);" class="btn btn-success">Sign in</button>
           </form>
+
+          <div id="loggedin" class="header-right hidden-element">
+            <p>Logged in as <span id="username"></span>. <a id="signoutButton" href="#" onclick="signout();return false;">Sign out</a></p>
+          </div>
 
           <div class="shopping-item">
             <a href="cart.html">
               Cart - 
-              <span class="cart-amunt">£00.00</span> 
+              <span class="cart-amount simpleCart_total"></span> 
               <i class="fa fa-shopping-cart"></i> 
-              <span class="product-count">0</span>
+              <span class="product-count simpleCart_quantity"></span> 
             </a>
           </div>
         </div>
 
         <nav>
           <ul class="nav nav-justified">
-            <li><a class="hvr-underline-from-center" href="../groceries/index.html">GROCERIES</a></li>
-            <li><a class="hvr-underline-from-center" href="#">HOME/GARDEN</a></li>
-            <li><a class="hvr-underline-from-center" href="#">TECHNOLOGY</a></li>
+            <li><a class="hvr-underline-from-center" href="groceries.html">GROCERIES</a></li>
+            <li><a class="hvr-underline-from-center" href="home_garden.html">HOME/GARDEN</a></li>
+            <li><a class="hvr-underline-from-center" href="technology.html">TECHNOLOGY</a></li>
             <li><a class="hvr-underline-from-center" href="#">LOYALTY PROGRAM</a></li>
             <li class="active"><a href="">CONTACT</a></li>
           </ul>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Vital">
+    <meta name="author" content="Joao Martins">
+    <link rel="icon" href="../img/icon.ico">
+
+    <title>Vital</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/vital_core.js"></script>
+
+    <script src="../js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="../js/simpleCart.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="masthead">       
+        <a href="../index.html">
+          <img class="logo" src="../img/logo.png" />
+        </a>
+
+        <div class="header-right">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" id="email" name="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" class="form-control">
+            </div>
+            <button type="button" id="signinButton" onclick="signin(this.form);" class="btn btn-success">Sign in</button>
+          </form>
+
+          <div id="loggedin" class="header-right hidden-element">
+            <p>Logged in as <span id="username"></span>. <a id="signoutButton" href="#" onclick="signout();return false;">Sign out</a></p>
+          </div>
+
+          <div class="shopping-item">
+            <a href="cart.html">
+              Cart - 
+              <span class="cart-amount simpleCart_total"></span> 
+              <i class="fa fa-shopping-cart"></i> 
+              <span class="product-count simpleCart_quantity"></span> 
+            </a>
+          </div>
+        </div>
+
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a class="hvr-underline-from-center" href="groceries.html">GROCERIES</a></li>
+            <li class="active"><a href="">HOME/GARDEN</a></li>
+            <li><a class="hvr-underline-from-center" href="technology.html">TECHNOLOGY</a></li>
+            <li><a class="hvr-underline-from-center" href="#">LOYALTY PROGRAM</a></li>
+            <li><a class="hvr-underline-from-center" href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Home/Garden Products</h1>
+        <p class="lead">Check out our latest products for your Home and your Garden.</p>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Tall-Garden-fork.jpg">
+            <p><span class="item_name">Tall Garden Fork</span><br /><span class="price item_price">£14.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Small-garden-fork.jpg">
+            <p><span class="item_name">Small Garden Fork</span><br /><span class="price item_price">£4.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/shovel.jpg">
+            <p><span class="item_name">Large Garden Shovel</span><br /><span class="price item_price">£14.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/small-shovel.jpg">
+            <p><span class="item_name">Small Garden Shovel</span><br /><span class="price item_price">£4.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/wheel-barrow.jpg">
+            <p><span class="item_name">Wheel Barrow</span><br /><span class="price item_price">£19.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/soil.jpg">
+            <p><span class="item_name">5KG Soil</span><br /><span class="price item_price">£9.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/bench.jpg">
+            <p><span class="item_name">Garden Bench</span><br /><span class="price item_price">£24.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/shed.jpg">
+            <p><span class="item_name">Garden Shed</span><br /><span class="price item_price">£29.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Garden_hose.jpg">
+            <p><span class="item_name">Garden Hose</span><br /><span class="price item_price">£9.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/weed-killer.jpg">
+            <p><span class="item_name">Weed Killer</span><br /><span class="price item_price">£4.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Slug-repellent.jpg">
+            <p><span class="item_name">Slug Repellent</span><br /><span class="price item_price">£4.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/sheers.jpg">
+            <p><span class="item_name">Garden Sheers</span><br /><span class="price item_price">£4.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Hedge-cutter.jpg">
+            <p><span class="item_name">Hedge Cutters</span><br /><span class="price item_price">£24.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Lawn_Mower.jpg">
+            <p><span class="item_name">Lawn Mower</span><br /><span class="price item_price">£29.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/garden-slabs.jpg">
+            <p><span class="item_name">Garden Slab</span><br /><span class="price item_price">£2.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-copyright">
+          <p>&copy; <b>2016</b> Vital</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-youtube"></i>
+            </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

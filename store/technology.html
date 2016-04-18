@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Vital">
+    <meta name="author" content="Joao Martins">
+    <link rel="icon" href="../img/icon.ico">
+
+    <title>Vital</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/vital_core.js"></script>
+
+    <script src="../js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="../js/simpleCart.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="masthead">       
+        <a href="../index.html">
+          <img class="logo" src="../img/logo.png" />
+        </a>
+
+        <div class="header-right">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" id="email" name="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" class="form-control">
+            </div>
+            <button type="button" id="signinButton" onclick="signin(this.form);" class="btn btn-success">Sign in</button>
+          </form>
+
+          <div id="loggedin" class="header-right hidden-element">
+            <p>Logged in as <span id="username"></span>. <a id="signoutButton" href="#" onclick="signout();return false;">Sign out</a></p>
+          </div>
+
+          <div class="shopping-item">
+            <a href="cart.html">
+              Cart - 
+              <span class="cart-amount simpleCart_total"></span> 
+              <i class="fa fa-shopping-cart"></i> 
+              <span class="product-count simpleCart_quantity"></span> 
+            </a>
+          </div>
+        </div>
+
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a class="hvr-underline-from-center" href="groceries.html">GROCERIES</a></li>
+            <li><a class="hvr-underline-from-center" href="home_garden.html">HOME/GARDEN</a></li>
+            <li class="active"><a href="">TECHNOLOGY</a></li>
+            <li><a class="hvr-underline-from-center" href="#">LOYALTY PROGRAM</a></li>
+            <li><a class="hvr-underline-from-center" href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Tech Products</h1>
+        <p class="lead">Take a look at our newest Technology.</p>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/iphones.jpeg">
+            <p><span class="item_name">Iphone 6s/s+</span><br /><span class="price item_price">£499.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/sam-s7.png">
+            <p><span class="item_name">Samsung S7/Edge</span><br /><span class="price item_price">£499.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/bb.png">
+            <p><span class="item_name">Blackberry Priv</span><br /><span class="price item_price">£399.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/4k-tv-sony.jpg">
+            <p><span class="item_name">Song 4k TV 60 inches</span><br /><span class="price item_price">£599.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/sony-a7.JPG">
+            <p><span class="item_name">Sony A7 Camera</span><br /><span class="price item_price">£1499.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/hp-printer.png">
+            <p><span class="item_name">HP Printer</span><br /><span class="price item_price">£99.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/ipad.png">
+            <p><span class="item_name">Ipad</span><br /><span class="price item_price">£399.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/ipod.png">
+            <p><span class="item_name">Ipod</span><br /><span class="price item_price">£249.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/ps4.png">
+            <p><span class="item_name">PS4</span><br /><span class="price item_price">£149.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/xbox1.png">
+            <p><span class="item_name">Xbox One</span><br /><span class="price item_price">£199.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Alienware-laptop.jpg">
+            <p><span class="item_name">Alienware Laptop</span><br /><span class="price item_price">£1199.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Hp-Laptop.jpg">
+            <p><span class="item_name">HP Laptop</span><br /><span class="price item_price">£299.99</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-copyright">
+          <p>&copy; <b>2016</b> Vital</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-youtube"></i>
+            </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

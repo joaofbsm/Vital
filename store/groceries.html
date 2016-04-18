@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Vital">
+    <meta name="author" content="Joao Martins">
+    <link rel="icon" href="../img/icon.ico">
+
+    <title>Vital</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../js/vital_core.js"></script>
+
+    <script src="../js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="../js/simpleCart.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="masthead">       
+        <a href="../index.html">
+          <img class="logo" src="../img/logo.png" />
+        </a>
+
+        <div class="header-right">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" id="email" name="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" class="form-control">
+            </div>
+            <button type="button" id="signinButton" onclick="signin(this.form);" class="btn btn-success">Sign in</button>
+          </form>
+
+          <div id="loggedin" class="header-right hidden-element">
+            <p>Logged in as <span id="username"></span>. <a id="signoutButton" href="#" onclick="signout();return false;">Sign out</a></p>
+          </div>
+
+          <div class="shopping-item">
+            <a href="cart.html">
+              Cart - 
+              <span class="cart-amount simpleCart_total"></span> 
+              <i class="fa fa-shopping-cart"></i> 
+              <span class="product-count simpleCart_quantity"></span> 
+            </a>
+          </div>
+        </div>
+
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="">GROCERIES</a></li>
+            <li><a class="hvr-underline-from-center" href="home_garden.html">HOME/GARDEN</a></li>
+            <li><a class="hvr-underline-from-center" href="technology.html">TECHNOLOGY</a></li>
+            <li><a class="hvr-underline-from-center" href="#">LOYALTY PROGRAM</a></li>
+            <li><a class="hvr-underline-from-center" href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="carrousel">
+        <img src="../img/groceries.jpg" />
+      </div>
+
+      <div class="jumbotron">
+        <h1>Fresh Products</h1>
+        <p class="lead">Take a look at our newest products. From the farm to your table!</p>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/potato.png">
+            <p><span class="item_name">Potatoes</span><br /><span class="price item_price">£1.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/grapes.png">
+            <p><span class="item_name">Grapes</span><br /><span class="price item_price">£2.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+              <img class="product-image" src="../img/products/pepper.png">
+              <p><span class="item_name">Red Pepper</span><br /><span class="price item_price">£1.50</span></p>
+              <div class="product-hover">
+                <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/cabbage.png">
+            <p><span class="item_name">Cabbage</span><br /><span class="price item_price">£2.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/carrot.png">
+            <p><span class="item_name">Carrots</span><br /><span class="price item_price">£0.75</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/lettuce.jpg">
+              <p><span class="item_name">Lettuce</span><br /><span class="price item_price">£1.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/tomatoe.jpg">
+            <p><span class="item_name">Tomatoes</span><br /><span class="price item_price">£1.50</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/coconut.jpg">
+            <p><span class="item_name">Coconut</span><br /><span class="price item_price">£2.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/orange.jpg">
+            <p><span class="item_name">Orange</span><br /><span class="price item_price">£0.50</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-row">
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/banana.jpg">
+            <p><span class="item_name">Banana</span><br /><span class="price item_price">£1.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/bread.jpg">
+            <p><span class="item_name">Bread</span><br /><span class="price item_price">£1.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <div class="product simpleCart_shelfItem">
+            <img class="product-image" src="../img/products/Milk.jpg">
+            <p><span class="item_name">1 Litre of Milk</span><br /><span class="price item_price">£1.00</span></p>
+            <div class="product-hover">
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-copyright">
+          <p>&copy; <b>2016</b> Vital</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank">
+              <i class="fa fa-youtube"></i>
+            </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

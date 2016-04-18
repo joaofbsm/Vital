@@ -19,12 +19,16 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/vital_core.js"></script>
+
+    <script src="js/jquery-1.12.3.min.js"></script>
+
+    <script type="text/javascript" src="js/simpleCart.js"></script>
   </head>
 
   <body>
-
     <div class="container">
-
       <div class="masthead">        
         <a href="">
           <img class="logo" src="img/logo.png" />
@@ -33,34 +37,40 @@
         <div class="header-right">
           <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input type="text" id="email" name="email" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" id="pwd" name="pwd" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="button" id="signinButton" onclick="signin(this.form);" class="btn btn-success">Sign in</button>
           </form>
 
+          <div id="loggedin" class="header-right hidden-element">
+            <p>Logged in as <span id="username"></span>. <a id="signoutButton" href="#" onclick="signout();return false;">Sign out</a></p>
+          </div>
+
           <div class="shopping-item">
-            <a href="cart.html">
+            <a href="store/cart.html">
               Cart - 
-              <span class="cart-amunt">£00.00</span> 
+              <span class="cart-amount simpleCart_total"></span> 
               <i class="fa fa-shopping-cart"></i> 
-              <span class="product-count">0</span>
+              <span class="product-count simpleCart_quantity"></span> 
             </a>
           </div>
         </div>
 
         <nav>
           <ul class="nav nav-justified">
-            <li><a class="hvr-underline-from-center" href="store/groceries/index.html">GROCERIES</a></li>
-            <li><a class="hvr-underline-from-center"href="#">HOME/GARDEN</a></li>
-            <li><a class="hvr-underline-from-center"href="#">TECHNOLOGY</a></li>
-            <li><a class="hvr-underline-from-center" href="#">LOYALTY PROGRAM</a></li>
-            <li><a class="hvr-underline-from-center" href="store/contact/index.html">CONTACT</a></li>
+            <li><a class="hvr-underline-from-center" href="store/groceries.html">G.ROCERIES</a></li>
+            <li><a class="hvr-underline-from-center" href="store/home_garden.html">HOME/GARDEN</a></li>
+            <li><a class="hvr-underline-from-center" href="store/technology.html">TECHNOLOGY</a></li>
+            <li><a class="hvr-underline-from-center" href="store/loyalty.html">LOYALTY PROGRAM</a></li>
+            <li><a class="hvr-underline-from-center" href="store/contact.html">CONTACT</a></li>
           </ul>
         </nav>
       </div>
+
+     <!-- <div class="simpleCart_items"></div> -->
 
       <div class="carrousel">
         <img src="img/carrousel1.png" />
@@ -68,8 +78,8 @@
 
       <div class="jumbotron">
         <h1>Loyalty Program</h1>
-        <p class="lead">In partnership with another company (which we don't know the name yet), we here at Vital present our costumers the Loyalty Program. The more you buy, the more you save!</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today!</a></p>
+        <p class="lead">In partnership with Bluediamond, we here at Vital present our costumers the Loyalty Program. The more you buy, the more you save!</p>
+        <p><a class="btn btn-lg btn-success" href="store/loyalty.html" role="button">Get started today!</a></p>
       </div>
 
       <hr />
@@ -81,32 +91,34 @@
 
       <div class="product-row">
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="img/products/potato.png">
-            <p>Potatoes<br /><span class="price">£1.00</span></p>
+            <p><span class="item_name">Potatoes</span><br /><span class="price item_price">£1.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-              <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
+
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
             <img class="product-image" src="img/products/grapes.png">
-            <p>Grapes<br /><span class="price">£2.00</span></p>
+            <p><span class="item_name">Grapes</span><br /><span class="price item_price">£2.00</span></p>
             <div class="product-hover">
-              <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-              <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+              <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
             </div>
           </div>
         </div>
+
         <div class="product-container">
-          <div class="product">
+          <div class="product simpleCart_shelfItem">
               <img class="product-image" src="img/products/pepper.png">
-              <p>Red Pepper<br /><span class="price">£1.50</span></p>
+              <p><span class="item_name">Red Pepper</span><br /><span class="price item_price">£1.50</span></p>
               <div class="product-hover">
-                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                <a href="javascript:;" class="add-to-cart-link item_add"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
               </div>
           </div>
         </div>
@@ -128,7 +140,6 @@
             </a>
         </div>
       </footer>
-
     </div>
   </body>
 </html>
