@@ -9,16 +9,21 @@ window.onload = function() {
   }
 }
 
+function signup(form) {
+
+}
+
 function signin(form) {
   var user = form.email.value;
   var pwd = form.pwd.value;
-  if(user == "joaofbsm@hotmail.com" && pwd == "1234") {
+  if((user == "joaofbsm@hotmail.com" && pwd == "1234") || (user == localStorage.getItem("username") && pwd == localStorage.getItem("pwd"))) {
     document.getElementById("email").style.display = 'none';
     document.getElementById("pwd").style.display = 'none';
     document.getElementById("signinButton").style.display = 'none';
     document.getElementById("loggedin").style.display = 'inline-block';
     document.getElementById("username").innerHTML = "Joao Francisco";
     localStorage.setItem("username", "Joao Francisco");
+    localStorage.setItem("pwd", pwd);
     localStorage.setItem("email", user)
   }
   user_name = user;
@@ -52,7 +57,7 @@ function updatePayment() {
   document.getElementById("finalValue").innerHTML = localStorage.getItem("grandTotal");
 }
 
-function purchase() {
+function pay() {
   simpleCart.empty();
   window.location.href="../index.html";
   alert("Payment Successful");

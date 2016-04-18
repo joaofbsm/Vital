@@ -326,3 +326,12 @@ span.price {
 #signoutButton {
   font-weight: normal; 
 }
+
+.signup {
+  margin-left: 20px;
+}
+
+.center {
+   align-content: center;
+   margin: 0 auto;
+}
